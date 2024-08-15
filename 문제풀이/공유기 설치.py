@@ -34,7 +34,7 @@ while(start <= end) :
         if loc[i] >= value + mid :  # 설치 좌표 + 최소 거리 예상치보다 더 멀리 집 좌표가 있을 땐 
             
             # 설치 
-            value = array[i]
+            value = loc[i]
             count += 1 
         # 설치 좌표 + 최소 거리 예상치보다 더 가까운 곳에 집이 있을 땐 
         # --> 설치하면 X : 그럼 예상 최소 거리가 갱신되기 때문에 
