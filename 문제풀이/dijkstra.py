@@ -41,13 +41,14 @@ def dijkstra(start):
         # heapq는 튜플의 첫 번째 항목을 기준으로 우선순위를 가진다. 
         dist , next = heapq.heappop(q) 
 
-        # 지금 노드를 거쳐가는 것이 해당 노드까지의 최단 거리보다 짧을 땐 이동X    
+        # 지금 노드에서 해당 노드까지 거리 자체가 최단 거리보다 짧을 땐 이동X    
         if distance[next] < dist : 
             continue 
 
-        # else : 이동 
+        # else : 지금 노드에서 해당 노드 까지 거리가 최단 거리보다 짧을 땐 이동 
+        # 이동 
 
-        # 해당 노드의 인접 노드 방문 
+        # Realease : 해당 노드의 인접 노드 방문 
         for i in graph[next] : 
             cost = dist + i[0] # 튜플 중 두번째 요소 꺼내기 
             if cost < distance[i[1]]: # 인접 노드까지가는 다른 경로보다 next 노드를 거치는게 더 좋으면 
