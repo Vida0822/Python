@@ -28,7 +28,7 @@ graph = [[INF]*(n+1) for _ in range(n+1)]
 # => 각각이 길이가 유동적인 '리스트'처럼 ! 
 
 
-# 자기자신으로 가는 비용은 0으로 초기화 
+# 자기자신으로 가는 비용은 0으로 초기화 --> O(N^2)
 for a in range(1, n+1) : 
     for b in range(1, n+1) : 
         if a==b : 
@@ -43,7 +43,7 @@ for _ in range(m) :
 
 
 
-# [알고리즘 수행] : 점화식 
+# [알고리즘 수행] : 점화식 --> O(N^3)
 for k in range(1, n+1) :  # k : 거쳐갈 노드 (passing point)
     for a in range (1, n+1) :  # 출발지
         for b in range(1, n+1) :  # 도착지 
