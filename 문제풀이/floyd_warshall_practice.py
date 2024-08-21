@@ -51,7 +51,7 @@ for k in range(1, n+1) :  # k : 거쳐갈 노드 (passing point)
             graph[a][b] = min(graph[a][b] ,graph[a][k] + graph[k][b] ) 
 #            *** 개념 이해 중요 
 #              a -> b의 최단거리를 현재까지 구한 a->b 최단거리와 k를 거쳐갈때의 거리를 비교해 작은 값으로 갱신 
-
+#              ※ 만들어준 graph 에 그대로 적용하는 것이 특징 ! 
 
 
     
